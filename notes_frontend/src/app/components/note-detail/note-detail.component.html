@@ -1,0 +1,31 @@
+<div class="detail" *ngIf="note; else noSelection">
+  <div class="detail-header">
+    <input
+      class="title-input"
+      [(ngModel)]="draft.title"
+      placeholder="Note title..."
+      aria-label="Note title"
+    />
+    <div class="actions">
+      <button class="btn btn-primary" (click)="onSave()">Save</button>
+      <button class="btn btn-danger" (click)="onDelete()">Delete</button>
+    </div>
+  </div>
+
+  <textarea
+    class="content-input"
+    [(ngModel)]="draft.content"
+    placeholder="Write your note here..."
+    aria-label="Note content"
+  ></textarea>
+</div>
+
+<ng-template #noSelection>
+  <div class="empty">
+    <div class="empty-card">
+      <div class="icon">💡</div>
+      <div class="title">Select or create a note</div>
+      <div class="subtitle">Use the + New button to get started</div>
+    </div>
+  </div>
+</ng-template>

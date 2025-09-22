@@ -2,10 +2,15 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Angular</title>
+  <title>Ocean Notes</title>
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2563EB">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script>
+    // Runtime env hook: orchestrator can inject window.__env__ before app loads.
+    window.__env__ = window.__env__ || { NOTES_API_BASE_URL: '/api' };
+  </script>
 </head>
 <body>
   <app-root></app-root>

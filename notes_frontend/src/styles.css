@@ -1,4 +1,4 @@
-/* Global styles for minimalistic design */
+/* Global styles for Ocean Professional theme */
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,73 @@
 
 html, body {
   height: 100%;
-  background-color: #ffffff;
+  background: #f9fafb;
+  color: #111827;
   font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  line-height: 1.4;
+}
+
+/* Buttons utility classes (shared) */
+.btn {
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 200ms ease, background-color 200ms ease;
+}
+
+.btn-primary {
+  background-color: #2563EB;
+  color: white;
+  box-shadow: 0 8px 20px rgba(37, 99, 235, 0.35);
+}
+
+.btn-primary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.45);
+}
+
+.btn-secondary {
+  background-color: #F59E0B;
+  color: #111827;
+  box-shadow: 0 8px 20px rgba(245, 158, 11, 0.35);
+}
+
+.btn-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(245, 158, 11, 0.45);
+}
+
+.btn-danger {
+  background-color: #EF4444;
+  color: white;
+  box-shadow: 0 8px 20px rgba(239, 68, 68, 0.35);
+}
+
+.btn-danger:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(239, 68, 68, 0.45);
+}
+
+/* Inputs */
+input, textarea {
+  font-family: inherit;
+}
+
+/* Scrollbars (subtle) */
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: rgba(17,24,39,0.2);
+  border-radius: 999px;
+}
+
+*::-webkit-scrollbar-track {
+  background: rgba(17,24,39,0.05);
 }

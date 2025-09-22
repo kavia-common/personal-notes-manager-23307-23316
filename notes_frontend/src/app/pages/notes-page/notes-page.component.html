@@ -1,0 +1,31 @@
+<div class="layout">
+  <div class="sidebar-wrap">
+    <app-sidebar (create)="onCreate()"></app-sidebar>
+  </div>
+
+  <div class="main">
+    <app-topbar (create)="onCreate()" (search)="onSearch($event)"></app-topbar>
+
+    <div class="content">
+      <div class="list-pane">
+        <div class="pane-header">
+          <div class="pane-title">Notes</div>
+          <div class="count">{{ filteredNotes().length }}</div>
+        </div>
+        <app-note-list
+          [notes]="filteredNotes()"
+          [selectedId]="selectedId()"
+          (select)="onSelect($event)"
+        ></app-note-list>
+      </div>
+
+      <div class="detail-pane">
+        <app-note-detail
+          [note]="selectedNote"
+          (save)="onSave($event)"
+          (delete)="onDelete()"
+        ></app-note-detail>
+      </div>
+    </div>
+  </div>
+</div>
